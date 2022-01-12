@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!-- browser compatibility report:
+	I tested the website on the desktop using two different browsers, google chrome and microsoft edge. The website was similarly displayed on both browsers.
+	indentation and margins were the same on both websites. However, one of the images was not successfully loaded on microsoft edge. There seemed to be a problem 
+	with the used image link. I fixed this issue by replacing it with another image of the same product. In addition, the colors appeared to be a bit darker on chrome
+	and the tabbles lines and the used fonts were sharper on chrome. As for the print style test, both browsers had similar prints. In print.css, I adjusted the margin 
+	and the width of the document to be more suitable for a print. In addition, I removed unnecessary sections such as the forms. 	
+
+
+
+ -->
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="theme.css"  media="screen">
+	<link rel="stylesheet" type="text/css" href="print.css" media="print">
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Phone Webshop</title>
+	<link rel="icon" href="https://www.seekpng.com/png/detail/449-4495963_mobile-phone-icon-png-clipart-computer-icons-iphone.png">
+</head>
+
+<body>
+
+	<section id="links">
+		<h1>Phone Webshop</h1>
+	
+		<nav  class="nav">
+			<a href="#topSelling">Most Popular</a>&nbsp;
+			<a href="#newProducts">New Products</a>&nbsp;
+			<a href="#contact">Contact Us</a>
+		</nav>
+	<p>
+	Phone Webshop saves your time and effort. Order your favorite phone to your home or choose the nearest pick up point to your address.<br>
+	<abbr title="Phone Webshop">PW</abbr> is best known for:</p>
+	<ol>
+	<li><span><em>High Quality</em></span></li>
+	<li><span><em>Great Prices</em></span></li>
+	<li><span><em>Quick Delivery</em></span></li>
+	</ol>
+	
+	</section>
+
+	<section id="topSelling">
+		<h2>Most Popular</h2>
+	
+		<table class="topSelling">
+			<caption class="mn"><strong>Most Popular Phones</strong></caption>
+			<tr class= "mn">
+				<th>Brand</th>
+				<th>Model</th>
+				<th>OS</th>
+				<th>Screen Size in inch</th>
+				<th>Image</th>
+			</tr>
+
+			<tr>
+			
+				<td>Samsung</td>
+				<td>Galaxy S10</td>
+				<td>Android</td>
+				<td>6</td>
+				<td>
+					<figure>
+						<img class="qq" src= "https://upload.wikimedia.org/wikipedia/commons/2/2a/Samsung_Galaxy_S10%2B.png" alt="Galaxy S10" width= "50" height= "100">
+						<figcaption><pre>Samsung Galaxy S10</pre></figcaption>
+					</figure></td>
+			</tr>
+
+			<tr>
+
+				<td>Apple</td>
+				<td>iPhone X</td>
+				<td>IOS</td>
+				<td>5</td>
+				<td>
+					<figure>
+						<img class="qq" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png" alt="iPhone X" width= "50" height= "100">
+						<figcaption><pre>Apple iPhone X</pre></figcaption>
+					</figure></td>
+			</tr>
+
+			<tr>
+				<td>Xiaomi</td>
+				<td>Redmi Note 9</td>
+				<td>Android</td>
+				<td>6</td>
+				<td>
+					<figure>
+						<img class="qq" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Xiaomi_Redmi_Note_7_4_GB_Cropped.jpg/800px-Xiaomi_Redmi_Note_7_4_GB_Cropped.jpg" alt="Xiaomi Redmi Note 9" width= "50" height= "100">
+						<figcaption><pre>Xiaomi Redmi Note 9</pre></figcaption>
+					</figure></td>
+			</tr>
+		</table>
+		<form action="https://wt.ops.labs.vu.nl/api22/30797f8a" method="post">
+			<input list="Brand" name = "brand" required placeholder="Select Brand">
+				<datalist id="Brand">
+					<option value="Apple">
+					<option value="Samsung">
+					<option value="Oppo">
+					<option value="Google">
+				</datalist>
+			<input type="text" name="model" required placeholder="Write a Model">
+			<input type="text" name="os" required placeholder="Write OS">
+			<input type="number" name="screensize" required placeholder="Select">
+			<input type="url" name="image" required placeholder="Image URL">
+			<input type="submit" value="Submit">
+		</form>
+		
+	</section>
+	
+	<section id="newProducts">
+		<h2>New Products</h2>
+		
+		<table class="newProducts">
+			<caption class="mn"><strong>New Phones</strong></caption>
+			<tr class= "mn">
+				<th>Phone</th>
+				<th>Price</th>
+			</tr>
+			<tr>
+				<td>
+					<dl>
+						<dt><img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/IPhone_13_vector.svg/800px-IPhone_13_vector.svg.png" alt="Apple Iphone 13" width= "50" height= "100"></dt>
+						<dd><br><br>Apple Iphone 13</dd>
+					</dl>
+				</td>
+				<td>999&euro; </td>
+			</tr>	
+			<tr>
+				<td>
+					<dl>
+						<dt><img src= "https://upload.wikimedia.org/wikipedia/commons/e/eb/Back_S21_Ultra.png" alt="Samsung Galaxy s21" width= "50" height= "100"></dt>
+						<dd><br><br>Samsung Galaxy s21</dd>
+					</dl>
+				</td>
+				<td>999&euro; </td>
+			</tr>	
+		</table>
+	</section>
+	
+	<section id="contact">
+		<h3>Countact Us</h3>
+		
+		<form action="https://example.com/apply" target="_blank" method="POST">
+		<p>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" placeholder="John Jones">
+		</p>
+		<p>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" placeholder="john.jones@example.com">
+		</p>
+		<p>
+			<label for="message">Message:</label>
+			<textarea id="message" name="message" placeholder="Send us a message" rows="15" cols="160"></textarea>
+		</p>
+		<p>
+			<input type="submit" value="Send">
+		</p>
+		</form>
+	
+	<pre>
+<a href="https://example.com" target="_blank">Visit our Facebook page</a>
+	</pre>
+	</section>
+	
+	<section>
+		<h4>Supported Payment Methods:</h4>
+			<ul class = "a">
+				<li>Ideal</li>
+				<li>Credit Card</li>
+				<li>Paypal</li>
+			</ul>
+	</section>
+</body>
+</html>
+
+
+

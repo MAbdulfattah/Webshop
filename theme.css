@@ -1,0 +1,178 @@
+/* To adjust the screen size */
+@media screen and (max-width: 1200px) {
+    .body { 
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .body {
+        width: 30%;
+    }
+}
+
+@media (orientation: landscape) {
+    .nav { 
+		color: yellow;
+    }
+}
+
+img {
+    max-width: 100%
+}
+
+:root {
+   --main-row-color: #05386B;
+   --table-caption:EDF5E1;
+}
+body {
+  background: lightgreen;
+  font: 16px Arial, sans-serif;
+}
+
+/* Tried to make the headers stand out */
+H1 {
+	text-align: center;
+	font-size: 30px;
+	font: 900 small-caps; 
+	color:darkgreen;
+	page-break-before: always;
+	page-break-after: always;
+}
+H2 {
+	font-size: larger; 
+	font-variant: small-caps;
+	color:darkgreen;
+	width: 160px;
+	border: 6px solid green;
+	padding: 2px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 10px;
+	page-break-before: auto;
+	page-break-after: auto;
+}
+H3 {
+	font-size: larger; 
+	font-variant: small-caps;
+	color:darkgreen;
+	width: 160px;
+	border: 6px solid green;
+	padding: 2px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 10px;
+	page-break-before: auto;
+	page-break-after: auto;
+}
+span {
+	color: green;
+	font-weight: bold;
+	widows: 3;
+	orphans: 3;
+}
+p {
+	font-size:16px; 
+	font-weight: bold;
+	font-family: serif;
+}
+
+/* Mkes the navigation bar more dynamic */
+.nav {
+	text-align: center;
+	text-decoration: none;
+    text-transform: lowercase;
+    font-weight: bold;
+    font-size: large;
+	font-style: italic;
+}
+.nav a:hover {
+	color: green;
+}
+.nav a:active{
+	color: blue;
+}
+	
+.mn {
+	color: var(--main-row-color);
+}
+
+/* Applying similar styles to both tables */
+.topSelling {
+	 border-style: solid;
+	 border-width: 1px;
+	 border-color: black;
+	 border-collapse: separate;
+	 border-spacing: 15px;
+	 caption-side: top;
+}
+.topSelling tr th {
+	border: 1px solid black;
+}
+.topSelling tr td {
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.newProducts {
+	 border: 1px solid black;
+	 border-collapse: separate;
+	 border-spacing: 15px;
+	 caption-side: top;
+}
+.newProducts tr th {
+	border: 1px solid black;
+}
+.newProducts tr td {
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.newProducts tr td dl dt {
+	float: left;
+}
+.qq {
+	vertical-align:  text-bottom;
+}
+.facebook {
+	color: black;
+}
+.facebook a:link {
+	color: yellow;
+}
+.facebook a:visited {
+	color: orange;
+}
+.facebook a:hover {
+	color: yellow;
+}
+caption {
+	color: var(--main-row-color);
+}
+#contact p {
+	text-indent: 10px;
+}
+#topSelling, #newProducts, #contact {
+	margin: 10px 30px 20px 20px;
+}
+#message {
+	background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVFRUXGRoYGBgXGBgaFxcXGhgYGBgaGBYYHSggGBolGxcXIjEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lHyUtLS0tLS0vNS0tLS0vLS0vLS0vLS0tLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tL//AABEIAOEA4QMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAABAAIDBwT/xAAwEAACAAMHAwUAAgICAwAAAAAAAQIR8CExQVFhcYGRoeESscHR8QMTMrJykkJSYv/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/8QAKhEBAAIBAwQABAcBAAAAAAAAAAERMQIhQRJRYfAycZGhEyJCUsHR8QP/2gAMAwEAAhEDEQA/APUa1CFzkUpCsLTxy4au69Pcm5XXFIoYdPNfBLJ1NXmFEjKc2MUVbhN2m3iUzKiysFu6z56zBuZyluZTmSqquFOyrAFTzD0zKHEGDc9iimV+9lTKdtWTCBRSNQqVqCegyfNYFtqcWgSwldWApaDO5ueWnIL7MtVV5TwGK++0K34C4hpZTVxmNa4dzSismZidVVhGZETwbJWYk1IEwHQVFnSBOWVWDIgz86DO8XDfaZkikOstXXJB6t+vki1qbuTE8qmE/JmGKvJpW5WVcRiJoTstwCq6k1WgPsrwTlN6mZV1GIU7NfgLYhZWPKuxNzFO3XjgHkzrAr/nEJhU/rQMxlPVjP62+wnZV4XINRDTSePXcuXeHMqmaQZoSNzVpmKysOC3uIsNemvGAYj+WmXFPS8u6wX0NLYzGspin5uEwfMQvCrwU3VblPj2dSGWQZCvn9mZVttuLirxPYtO1chU2SVuYNEmFzBxFw3hE/ukGFfYQyeXdkM4s/8AYSfRsWu4y2MUVhRWV8lYwneTsJqVs6wJ15yAYlkYUQwrUGtbEFPqnhWxqYT2RqF+Aks+nKpheqlwK0pgBIolK8msrfdDDCFnKiaJumZnXjElXbuCk51b0NexQshlGlWPJKedxJ71sZdmlwhJmTO2sy9X1yFk9uhtZhZD4qmYnbnjWRuKFXGJg4aVtocVYTdyrsM51aQYnbXBqVXfoalFDrMpDKtuVbG9scwkynWwUf279V9APpeXZkOmDdqJakl+BKeHGY1bnqGWn3wroZquTUtWZ2qWmYBWRLvNCpSYKyQhbMbtKJknOta6GZA25ML8fhlupo09F5Fw2X2gjZmVpqJmW8qr5NeoNGIypE3Z8DBZgGd1pIlDVclXuUGGP0QhW8q0es67k7HVXGW348ItEGKLuhBLkmvsKHqK2l8lDVtYmnUgmWW7awFufiX3Ui9Kqryaw+wULsHsEdYm0utTBrWVYAYb+7TTZOG3YkrcbPYC/t0IvQ9CHTB+VJ41YU51VoLPM36b7f0EquA9OBQ1l3F0yIq1CHvV/QImvytzUMWBRlElIYXroUeVSEdhlvT6GHJ19jwmEwt7BYEliV1lxSmgvBv0JRTBuvIwvNhFJ10+SQpFCuK8gFVWJt1+BCgTr9IlGP3MxS5K19CSlpWBVUKGkUJSyrfoAqsa/Rh1CHD3x19inbMBbvrYy398jLUHrOW3Uqz5DJKw1HFb14BOtcSWjn6ln3ZBJZ+wml6I7e/VvewJFkUzKRBl9l6tqsMzxvqVhrpUggSxutBo1E3lINu6qkGpant2plEE8lVgxrcJbMnhsSlOzySZbFC3jWQKRfI1YReE5u+5+CiuuW1XA8qtKqfASi3WV5qWRzXwdIYwuEoZzMyWb9hgfS4pzFop2lwgT5CHWXsIRTc7zd3t9gq9q3FoEwxFKvY23WgGoVhV/kATWNhOc6wq4k1OqxCLfjQrVyHz7ILsGaa25RO/MhMbbKSzfcjEnp3AnTqLhtpO4ItzUJm+vkrLW1ZGKrg04azKQWJHqJr6KVuYxWBqZtTy0KfnrbWoJy/O5NXBMZTU5CrrPJlo2oa9xMpab8mfBpBCrL62CCGvApClVxmeAW01XkUq8gqroU2gs7mXWZmJ4jClYutVeLQRKsicG3kFfXybcU8gag5F6XVsl++5OHx+lEEwp26dCYRsIIXWYWnRa9d9AleZi3rUYVO8EF4323ukEMYxyp63mZ1IE1wP7FTI3/XqiLZekOcwiWppylc1veYmZKE9DahrcGqrcU8ikpKq5KKvzgrteakUT0s1CBNb6sk9QUMzcSkpOVbBRmSinzV5Sr4yJLUIW9g9OPUouQUv2YUttqVV9FD4eop21V4OG8ENZqzAzFD1V1cE62yGKqQSnOFGm3kkXpqzDnQFXUKkncgbliamLXL07BRMnF0tlSKFZg1dUxCTRs9hcK/SgzxrAIaqrwKJ1+ElqTchhtn2vCWZ3a1eShrUIlbYULrIKZf8exGP6964Aq1q/bDcKtr2KeSFc5fAORllOTFV0JO6farCwNNQnCsZahbMpTqqYpz3Isxyos5ilPzWgJduMChqQZhOKvJzZ0eYRK+YujGWYqzJ55jDFc/wkC1DOzL2LXtYZnIbwrarj9C1a/IuWfNYg1b8cX+4Z8BflImsrkSBrmQXCnYW3nkneb9IsmRPJV+DC8fyruoQxbfhl14yBSf5qanfVeAwzwJMIE+LRUWZPW4p9ABZJTHBymCWRp4p/glctf2aPt9ic/U8vYi0z0tTs0wD1Uh26mkt+5Januz6tdCXvwSasngDYGgawzqZTWVV8BYCypXfIRKtTMUWF5Jhd3QzO3P5Jt3T8ck54KUtxabqzBzS/SSxJPUJbhMlLR258FOrjKhnK5s3DVVeCmVE7ayCdM1OzXC8oFywBwk1TxzJy7V7A+oUp2XXdy54GVutxSxln59wMS6mld9VcEsayw2K3QBT0vqRSl8gnr7VgLdnSpgTiwv1yBZ1+m0zLYSPChzctyaa1xNJGHoBuz/27EHq26kF27fZRMyybeyCILG7asYRW9SSMwoUbGVKtiUQxq2qyCGGfXSsAjUaxr2Mqy40lKdgw3hAntd0JClYD7lhqIiQygc7NxsB6IUTEwHf9G3FiDlbZrXcIsuhLSE/FIonlYTdpRcV+goJLiupS4GWAq7MWFu33+TDGJ1V5RV56Ajypu7reE1liMXAT9gXafXQ1HhK7Iy7ZVVcSqswUVJYdKqY1wEOwTz23Am5Ye5eq6sBW4JzpAVmfsRv+1f/AB3IX4a6p7DIGtK2wHsMMX3UwyH1WBRQ0ucClkSePTkF7Mylb8kuhoos76rqC1v9WGZ2m0u5L2tAIYnOrB2JZk7xYIVjcPqJoJFaruoScONcmtJSKq7dCJMVuwtZE1ZPoUSFq9Z/IRhVUjcrifyaT/b0SyXPQYl+zGWm5OG+tyiUNgQ4VlXJqLJ3lFdYEYiUpyKB2i9+OR/jWNVYFthV9djS43BSv07lO0UTulUhgalU+ha/hQuTzsBBkqfgjl/U8mI6dK3Lqok3oSUrO4RPDQklW/uKSmXfWNMW1tuarclDmJAlguQ+Nxhmn8fpqJqsgUGPqxrIPUlMxN+MRKy2nSyBYSrIv5G6mXqrsEtqLa8zz+jPmrxk98irnAdfJNk9hhWlbVcLWw4k7q1CNloluMNttSIww69zqr8Dmp4CKVr1Zsypmml4BZTXUAeluYsniWgRK7X9M2YOvo1FGqrQy5hcifFXi4XXUJi7bMausC4HqJOwfasgvwBdu0tiM2594SJ0yz+Fq9peroCh/Acd9aC3hUlsWGomJD/NjVwQ2We5pbBYxbK+Qcn+i4rbauGcuSmWUvs09gcW5LWuhKSISlSKUtiUIx/mmxVmhLavgIVVbkq0xGb9/fIkpZ9OZSMwobHtbXQiCL9JLoqtKGHIVDaUZegzmTdmFlnBY2Sv04+AnzM9Ri/QS4CFYCm62tK129PIrp81ImpYak4q1vDBk3OXzWfU5tW1Lqa1rgInhhMAbFV7lLr5CXYWsxamhbSqpE2Ga6AdPVsRerboQryVPv8Aoh/y4KC7r8kROF598iH/AMuCz4+SI3Df/P8Alp4VijEN/wD1IiacMe/cx3vj3D+XHj2IiwsctP5OcGG3yRDhv9MOuW7/ANzm7nu/giJxLnox75GJ0eG/0RE1ZhIz72GCrM1FhWBEalvVifeBEZhve/yREnEppZ/g+vY0ryIsYXR8Et/zfAfxY7/JEYjDDMf+KBf5ARZwR/bpF9mcqxRETlI+H6j6B3vcCDpOH1ERGnlf/9k=");
+	background-repeat: repeat;
+}
+
+/* Making the buttons attractive */
+input[type=submit] {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+input:focus {
+  background-color: yellow;
+}
+ul.a {list-style-type: square;
+	list-style-position: inside;}
+

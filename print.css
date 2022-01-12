@@ -1,0 +1,13 @@
+/* print.css */
+
+@media print {
+    .body {
+		margin: 2em;
+		color: #fff;
+		background-color: #000;
+        width: 75%;
+    }
+}
+header, footer, aside, nav, form, iframe, .menu, .hero, .adslot {
+  display: none;
+}
