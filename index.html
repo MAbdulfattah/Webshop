@@ -16,14 +16,17 @@
 	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<script src ="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+	<script src="script.js" defer></script>
 	<title>Phone Webshop</title>
 	<link rel="icon" href="https://www.seekpng.com/png/detail/449-4495963_mobile-phone-icon-png-clipart-computer-icons-iphone.png">
 </head>
 
 <body>
 
-	<section id="links">
+
+	<section id="links" >
 		<h1>Phone Webshop</h1>
 	
 		<nav  class="nav">
@@ -42,58 +45,27 @@
 	
 	</section>
 
-	<section id="topSelling">
+	<section id="top">
 		<h2>Most Popular</h2>
-	
-		<table class="topSelling">
+
+		<table id="topSelling">
 			<caption class="mn"><strong>Most Popular Phones</strong></caption>
+			<thead>
 			<tr class= "mn">
-				<th>Brand</th>
-				<th>Model</th>
-				<th>OS</th>
-				<th>Screen Size in inch</th>
-				<th>Image</th>
+				<div>
+					<th name="brand">brand</th>
+					<th name="model">model</th>
+					<th name="os">os</th>
+					<th name="screensize">screensize</th>
+					<th name="image">image</th>
+				</div>
+			</thead>
 			</tr>
-
-			<tr>
-			
-				<td>Samsung</td>
-				<td>Galaxy S10</td>
-				<td>Android</td>
-				<td>6</td>
-				<td>
-					<figure>
-						<img class="qq" src= "https://upload.wikimedia.org/wikipedia/commons/2/2a/Samsung_Galaxy_S10%2B.png" alt="Galaxy S10" width= "50" height= "100">
-						<figcaption><pre>Samsung Galaxy S10</pre></figcaption>
-					</figure></td>
-			</tr>
-
-			<tr>
-
-				<td>Apple</td>
-				<td>iPhone X</td>
-				<td>IOS</td>
-				<td>5</td>
-				<td>
-					<figure>
-						<img class="qq" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png" alt="iPhone X" width= "50" height= "100">
-						<figcaption><pre>Apple iPhone X</pre></figcaption>
-					</figure></td>
-			</tr>
-
-			<tr>
-				<td>Xiaomi</td>
-				<td>Redmi Note 9</td>
-				<td>Android</td>
-				<td>6</td>
-				<td>
-					<figure>
-						<img class="qq" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Xiaomi_Redmi_Note_7_4_GB_Cropped.jpg/800px-Xiaomi_Redmi_Note_7_4_GB_Cropped.jpg" alt="Xiaomi Redmi Note 9" width= "50" height= "100">
-						<figcaption><pre>Xiaomi Redmi Note 9</pre></figcaption>
-					</figure></td>
-			</tr>
+		
 		</table>
-		<form action="https://wt.ops.labs.vu.nl/api22/30797f8a" method="post">
+		<button onclick = "reset()"  >Reset</button>
+
+		<form action="https://wt.ops.labs.vu.nl/api22/10b20797" method="post">
 			<input list="Brand" name = "brand" required placeholder="Select Brand">
 				<datalist id="Brand">
 					<option value="Apple">
@@ -105,7 +77,7 @@
 			<input type="text" name="os" required placeholder="Write OS">
 			<input type="number" name="screensize" required placeholder="Select">
 			<input type="url" name="image" required placeholder="Image URL">
-			<input type="submit" value="Submit">
+			<button type="submit" value="Submit">Submit</button>
 		</form>
 		
 	</section>

@@ -26,7 +26,7 @@ img {
    --table-caption:EDF5E1;
 }
 body {
-  background: lightgreen;
+  background-color: #5CDB95;
   font: 16px Arial, sans-serif;
 }
 
@@ -100,7 +100,7 @@ p {
 }
 
 /* Applying similar styles to both tables */
-.topSelling {
+#topSelling {
 	 border-style: solid;
 	 border-width: 1px;
 	 border-color: black;
@@ -108,10 +108,12 @@ p {
 	 border-spacing: 15px;
 	 caption-side: top;
 }
-.topSelling tr th {
+#topSelling tr th {
+	width: 50px;
+	height: 50px;
 	border: 1px solid black;
 }
-.topSelling tr td {
+#topSelling tr td {
 	border-right: 1px solid black;
 	border-bottom: 1px solid black;
 }
@@ -152,7 +154,7 @@ caption {
 #contact p {
 	text-indent: 10px;
 }
-#topSelling, #newProducts, #contact {
+#top, #newProducts, #contact {
 	margin: 10px 30px 20px 20px;
 }
 #message {
@@ -175,4 +177,12 @@ input:focus {
 }
 ul.a {list-style-type: square;
 	list-style-position: inside;}
-
+button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
