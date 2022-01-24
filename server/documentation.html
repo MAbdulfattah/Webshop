@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>documentation</title>
+	<style>
+		body {
+				background-color: powderblue;
+				color: darkblue;
+				}
+		#nav {
+				font-size: 17px;
+				position: relative;
+				overflow: hidden;
+				background-color: black;
+				color: white;
+		}
+		#nav a {
+				float: left;
+				color: #f2f2f2;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				font-size: 17px;
+		}
+		
+</style>
+</head>
+
+<body>
+    <h1>How to use the phones database</h1>
+	<p>This documentation includes explaination and examples of how to interact with the <b>phones database</b> based on REST principles. This allows users to create, retrieve, update and delete phones in the database. This is done using the HTTP requests (GET, POST, PUT and DELETE). The phones Web API endpoints return JSON metadata about phones (brand, model, os, screensize, and image) directly from the database.
+	<br> <b>NOTE: the server runs using the command "npm start"</b></p>
+
+	<nav  id="nav" >
+			<a href="#create">Create</a>
+			<a href="#retrieve">Retrieve</a>
+			<a href="#update">Update</a>
+			<a href="#delete">Delete</a>
+			<a href="#retrieveAll">RetrieveAll</a>
+			<a href="#reset">Reset</a>
+	</nav>
+	
+	<h2 id="create">Create a phone row</h2>
+	<p> This method sends an HTTP <b>post</b> request to create a new phone in the database.
+		<br><b>example:</b>
+		<br><em>URL call: </em>http://localhost:3000/create
+		<br><em>Request body (json):</em>{"brand":"Apple","model":"iPhone","os":"IOS","image":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/440px-IPhone_X_vector.svg.png","screensize":6}
+		<br><br><b>Possible Responses:</b>
+			<ul>
+				<li>Success(201):Phone has been added to the database.</li>
+				<li>If an error is present in the request body (json) then error is shown in the console</li>
+			</ul>
+	</p>
+	<h2 id="retrieve">Retrieve a phone</h2>
+	<p> This method sends an HTTP <b>get</b> request to the database and retrieves the phone with the specified id.
+		<br><b>example:</b>
+		<br><em>URL call: </em>http://localhost:3000/retrieve/id
+		<br><br><b>Possible Responses:</b>
+			<ul>
+				<li>"Phone with id has been retrieved" is displayed in the console and the phone with matching id is returned in the response body (json).</li>
+				<li>Error 404: Phone with id was not found.</li>
+				<li>If a misspelling is present in the URL e.g./retriee/id then an error is returned ( Cannot GET /retriee/id)</li>
+			</ul>
+	</p>
+	<h2 id="update">Update phone metadata</h2>
+	<p> This method sends an HTTP <b>put</b> request to the database and updates the phone metadata with the specified id.
+		<br><b>example:</b>
+		<br><em>URL call: </em>http://localhost:3000/update/id
+		<br><em>Request body (json):</em>{"brand":"Samsung","model":"S20"}
+		<br><br><b>Possible Responses:</b>
+			<ul>
+				<li>"Phone with id has been updated" is displayed in the console and returned in the response body.</li>
+				<li>Error 404: Phone with id was not found.</li>
+				<li>If a misspelling is present in the URL e.g./updaaate/id then an error is returned ( Cannot PUT /updaaate/id)</li>
+			</ul>
+	</p>
+	<h2 id="delete">Delete a phone</h2>
+	<p> This method sends an HTTP <b>delete</b> request to the database and deletes the phone with the specified id.
+		<br><b>example:</b>
+		<br><em>URL call: </em>http://localhost:3000/delete/id
+		<br><br><b>Possible Responses:</b>
+			<ul>
+				<li>"Phone with id has been deleted from the database" is displayed in the console and returned in the response body.</li>
+				<li>Error 404: Phone with id was not found.</li>
+				<li>If a misspelling is present in the URL e.g./delte/id then an error is returned (Cannot DELETE /delte/id)</li>
+			</ul>
+	</p>
+	<h2 id="retrieveAll">Retrieve all phones</h2>
+	<p> This method sends an HTTP get request to the database and retrieves all phones.
+		<br><b>example:</b>
+		<br><em>URL call: </em>http://localhost:3000/retrieveAll
+		<br><br><b>Possible Responses:</b>
+			<ul>
+				<li>"All phones in the database have been retrieved" is displayed in the console and all phones are returned in the response body (json).</li>
+				<li>if a misspelling is present in the URL e.g./retrieveAl then an error is returned (Cannot GET /retrieveAl)</li>
+			</ul>
+	<h2 id="reset">Reset the database</h2>
+	<p> This method sends an HTTP <b>delete</b> request to the database and deletes all the phones in the database.
+		<br><b>example:</b>
+		<br><em>URL call: </em>http://localhost:3000/reset
+		<br><br><b>Possible Responses:</b>
+			<ul>
+				<li>"All phones in the database are deleted" is displayed in the console and returned in the response body.</li>
+				<li>If a misspelling is present in the URL e.g./resit then an error is returned (Cannot DELETE /resit)</li>
+			</ul>
+	</p>
+	<h2 id="si">Safe and Idempotent</h2>
+	<p>From the mentioned HTTP methods, the GET method is safe (GET does not alter the state of the database) and idempotent (GET could be called multiple times and will always get the same results).
+	<br> Whereas, PUT, POST and DELETE are idempotent (they could be called multiple times and will always get the same results) but they are <b>NOT</b> safe (they alter the state of the database).
+</body>
